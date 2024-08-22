@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const SinglePost = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true); // Added loading state
+  const [loading, setLoading] = useState(true); 
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const SinglePost = () => {
       } catch (error) {
         console.error("Error fetching post:", error);
       } finally {
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       }
     };
 
